@@ -4,19 +4,19 @@
     width: 340px;
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 50px;
+    /*margin: 25px 0px 25px 0px;*/
     box-sizing: border-box;
 }
 
 .location-card p {
     position: absolute;
     z-index: 3;
-    top: 80%;
+    top: 77%;
     color: #ffffff;
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 18px;
-    width: 50%;
+    width: 40%;
 }
 
 .card-filter {
