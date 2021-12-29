@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,400&display=swap');
+
+header img { width: 210px;}
+
+.kasa-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 100px;
+    box-sizing: border-box;
+}
+
+.header-link {
+    padding: 20px;
+    color: #ff6060;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 480px){
+    .kasa-header { padding: 20px}
+    header img { width: 145px; height: 47px}
+    .header-link { font-size: 15px; padding: 10px}    
+}
