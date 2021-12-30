@@ -1,20 +1,24 @@
 .kasa-collapse {
-    width: 1023px;
+    width: 100%;
     font-family: 'Montserrat';
     margin-bottom: 31px;
+    background-color: #f6f6f6;
 }
 
 .collpase-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 47px;
     background-color: #FF6060;
     border: 5px;
     color: #ffffff;
     font-weight: 500;
-    padding-left: 18px;
+    padding: 0px 18px;
     border-radius: 5px;
 }
+
+.collpase-header img { cursor: pointer; height: 23px; width: 23px;}
 
 .collapse-container {
     color: #FF6060;
@@ -22,5 +26,6 @@
     font-weight: 400;
     padding: 30px 18px;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 0px 5px 5px 0px ;
+    line-height: 25px;
 }
