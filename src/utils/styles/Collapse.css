@@ -1,0 +1,26 @@
+.kasa-collapse {
+    width: 1023px;
+    font-family: 'Montserrat';
+    margin-bottom: 31px;
+}
+
+.collpase-header {
+    display: flex;
+    align-items: center;
+    height: 47px;
+    background-color: #FF6060;
+    border: 5px;
+    color: #ffffff;
+    font-weight: 500;
+    padding-left: 18px;
+    border-radius: 5px;
+}
+
+.collapse-container {
+    color: #FF6060;
+    background-color: #f6f6f6;
+    font-weight: 400;
+    padding: 30px 18px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
