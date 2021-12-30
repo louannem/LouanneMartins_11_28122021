@@ -16,9 +16,10 @@
     font-weight: 500;
     padding: 0px 18px;
     border-radius: 5px;
+    cursor: pointer; 
 }
 
-.collpase-header img { cursor: pointer; height: 23px; width: 23px;}
+.collpase-header img { height: 23px; width: 23px;}
 
 .collapse-container {
     color: #FF6060;

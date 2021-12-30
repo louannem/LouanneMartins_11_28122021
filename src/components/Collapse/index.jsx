@@ -21,12 +21,12 @@ class Collapse extends React.Component {
     render() {
         return(
             <div className="kasa-collapse">
-                <div className="collpase-header">
+                <div className="collpase-header" onClick={() => this.toggleCollapse()}>
                     <span>{this.props.title}</span>
                     {this.state.showCollapse ?
-                    <img src={ChevronUp} alt="Dérouler" onClick={() => this.toggleCollapse()}/>
+                    <img src={ChevronUp} alt="Dérouler" />
                     :
-                    <img src={ChevronDown} alt="Dérouler" onClick={() => this.toggleCollapse()}/> 
+                    <img src={ChevronDown} alt="Dérouler"/> 
                     }
                     
                 </div>
