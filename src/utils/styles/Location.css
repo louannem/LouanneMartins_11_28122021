@@ -1,3 +1,5 @@
+/**     GLOBAL SETTINGS **/
+
 .location-header {
     height: 120px;
     display: flex;
@@ -7,6 +9,7 @@
     font-family: 'Montserrat';
 }
 
+/** TITLE STYLE **/
 .location-title { 
     width: 60%;
     height: 100%;
@@ -20,6 +23,8 @@
 .tags-list { display: flex;}
 .tags-list div { margin-right: 10px; width: 115px; background-color: #FF6060; color: #ffffff; padding: 5px; font-size: 12px; border-radius: 10px; text-align: center;}
 
+
+/** HOST PROFILE STYLE  **/
 .host-profil {display: flex; justify-content: center; align-items: center; width: 170px;}
 .host-profil span { text-align: right; margin-right: 10px; font-size: 18px; color: #FF6060; font-weight: 500;}
 .host-profil img { height: 64px; width: 64px; border-radius: 100%;}
@@ -31,6 +36,45 @@
 }
 .location-rating img { height: 34px;}
 
+
+/**     GALLERY STYLE  **/
+.kasa-gallery {
+    height: 415px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.gallery-arrows {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding: 0px 23px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gallery-arrows img { height: 80px; cursor: pointer;}
+.gallery-img {
+    position: absolute;
+    top: -100%;
+    width: 100%;
+}
+
+.gallery-counter {
+    position: absolute;
+    z-index: 1;
+    top: 90%;
+    left: 50%;
+    color: #ffffff;
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+/** COLLAPSES STYLE **/
 .location-collapses  {
     display: flex;
     flex-direction: row;
@@ -38,5 +82,29 @@
 }
 .location-collapses .kasa-collapse { background-color: transparent;}
 .location-collapses .kasa-collapse {
-    width: 580px;
+    width: 48%;
+}
+
+
+@media screen and (max-width: 480px) {
+    .location-header { flex-direction: column; height: auto;}
+    .location-header h1 { font-size: 18px;}
+    .location-header h2 { font-size: 14px;}
+    
+    .location-host { display: flex; flex-direction: row; justify-content: space-between; height: 32px; margin-top: 15px;}
+    .host-profil {  order: 1; justify-content: flex-end;}
+    .host-profil img { width: 32px; height: 32px;}
+    .host-profil span { font-size: 12px;}
+    .location-rating { height: 100%; margin: 0; align-items: center;}
+    .location-rating img { height: 18px; width: 18px;}
+
+    .kasa-gallery { height: 255px; margin-bottom: 15px;}
+    .gallery-img { height: 100%; top: 0} 
+    .gallery-arrows img { height: 20px;}
+    .gallery-counter { display: none;}
+
+    .location-collapses { flex-direction: column; max-width: 100%; }
+    .location-collapses .kasa-collapse { width: 100%;}
+
+
 }

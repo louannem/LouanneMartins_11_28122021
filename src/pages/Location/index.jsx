@@ -1,5 +1,6 @@
 import React from "react";
 import Collapse from "../../components/Collapse";
+import Gallery from "../../components/Gallery";
 import "../../utils/styles/Location.css"
 import RedStar from "../../assets/red-star.svg"
 import GreyStar from "../../assets/grey-star.svg"
@@ -47,7 +48,9 @@ class Location extends React.Component {
     render() {
         return(
             <div className="kasa-location">
-                <div className="kasa-gallery"></div>
+
+                <Gallery imgSrc={locationInfo.pictures[0]} />
+                
                 <div className="location-header">
                     <div className="location-title">
                         <h1>{locationInfo.title}</h1>

@@ -53,7 +53,7 @@
 }
 
 @media screen and (max-width : 480px){
-    .kasa-about, .kasa-home {
+    .kasa-about, .kasa-home, .kasa-location {
         padding: 0px 20px
     }
 
