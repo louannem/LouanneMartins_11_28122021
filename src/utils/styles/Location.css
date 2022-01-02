@@ -1,0 +1,35 @@
+.location-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    font-family: 'Montserrat';
+}
+
+.location-title { width: 60%}
+.location-title h1 { margin: 0; color: #FF6060; font-size: 36px; font-weight: 500;}
+.location-title h2 { color: #FF6060; font-size: 18px; font-weight: 500; margin-top: 0}
+
+.tags-list { display: flex; margin-top: 20px}
+.tags-list div { margin-right: 10px; width: 115px; background-color: #FF6060; color: #ffffff; padding: 5px; font-size: 12px; border-radius: 10px; text-align: center;}
+
+.host-profil {display: flex; justify-content: center; align-items: center; width: 170px;}
+.host-profil span { text-align: right; margin-right: 10px; font-size: 18px; color: #FF6060; font-weight: 500;}
+.host-profil img { height: 64px; width: 64px; border-radius: 100%;}
+
+.location-rating { 
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px
+}
+.location-rating img { height: 34px;}
+
+.location-collapses  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.location-collapses .kasa-collapse { background-color: transparent;}
+.location-collapses .kasa-collapse {
+    width: 580px;
+}

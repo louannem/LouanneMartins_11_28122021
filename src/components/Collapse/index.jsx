@@ -10,7 +10,6 @@ class Collapse extends React.Component {
             showCollapse : false,
         }
         this.toggleCollapse = this.toggleCollapse.bind(this);
-        console.log(this.props, this.state)
     }
 
     toggleCollapse(){
