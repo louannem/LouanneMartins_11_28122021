@@ -39,17 +39,18 @@ const locationInfo =
 
 
 class Location extends React.Component {
-    listEquip() {
-        const equipments = () => {locationInfo.equipments.map((equipment) => (
-            <li>{equipment}</li>
-        ))}
-        equipments()
+    
+    listEquip () {
+        return locationInfo.equipments.map((equipment) => (
+            <li key={equipment}>{equipment}</li>
+        ))
     }
+
     render() {
         return(
             <div className="kasa-location">
 
-                <Gallery imgSrc={locationInfo.pictures[0]} index={locationInfo.pictures.indexOf(locationInfo.pictures[0]) + 1} counter={locationInfo.pictures.length} />
+                <Gallery imgSrc={locationInfo.pictures[0]} index={locationInfo.pictures.indexOf(locationInfo.pictures[0]) + 1} arrayLength={locationInfo.pictures.length} counter={locationInfo.pictures.length} picturesArray={locationInfo.pictures} />
 
                 <div className="location-header">
                     <div className="location-title">
@@ -113,10 +114,6 @@ class Location extends React.Component {
                     </div>
                 </div>
                 
-                
-                
-                
-
                 <div className="location-collapses">
                     <Collapse title="Description" content={locationInfo.description}/>
                     <Collapse title="Description" content={this.listEquip()}/>

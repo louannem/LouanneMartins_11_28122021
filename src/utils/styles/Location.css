@@ -59,8 +59,10 @@
 
 .gallery-arrows img { height: 80px; cursor: pointer;}
 .gallery-img {
+    display: block;
     position: absolute;
-    top: -100%;
+    margin-top: auto;
+    margin-bottom:auto ;
     width: 100%;
 }
 
@@ -85,6 +87,8 @@
     width: 48%;
 }
 
+.location-collapses li { list-style: none;}
+
 
 @media screen and (max-width: 480px) {
     .location-header { flex-direction: column; height: auto;}
@@ -99,11 +103,11 @@
     .location-rating img { height: 18px; width: 18px;}
 
     .kasa-gallery { height: 255px; margin-bottom: 15px;}
-    .gallery-img { height: 100%; top: 0} 
+    .gallery-img { min-height: 100%; } 
     .gallery-arrows img { height: 20px;}
     .gallery-counter { display: none;}
 
-    .location-collapses { flex-direction: column; max-width: 100%; }
+    .location-collapses { flex-direction: column; max-width: 100%; font-size: 12px; }
     .location-collapses .kasa-collapse { width: 100%;}
 
 
