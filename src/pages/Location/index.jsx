@@ -49,8 +49,8 @@ class Location extends React.Component {
         return(
             <div className="kasa-location">
 
-                <Gallery imgSrc={locationInfo.pictures[0]} />
-                
+                <Gallery imgSrc={locationInfo.pictures[0]} index={locationInfo.pictures.indexOf(locationInfo.pictures[0]) + 1} counter={locationInfo.pictures.length} />
+
                 <div className="location-header">
                     <div className="location-title">
                         <h1>{locationInfo.title}</h1>
