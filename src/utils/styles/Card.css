@@ -1,4 +1,6 @@
 .location-card {
+    display: flex;
+    align-items: flex-end;
     position: relative;
     height: 340px;
     width: 340px;
@@ -11,12 +13,12 @@
 .location-card p {
     position: absolute;
     z-index: 3;
-    top: 77%;
     color: #ffffff;
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 18px;
     width: 40%;
+    margin: 0
 }
 
 .card-filter {
