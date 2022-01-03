@@ -9,6 +9,7 @@ import Error from './pages/Error';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { data } from './data/logements'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,8 +18,9 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/a-propos" element={ <About />}></Route>
-        <Route path="/location" element={<Location />}></Route>
+        <Route path="/location/" element={<Location />}></Route>
         <Route path="*" element= { <Error />}></Route>
+        {data.map((location) => ( <Route path={`/location/${location.id}`} element={<Location />}></Route> ))}
       </Routes>
     </Router>
     <Footer />
