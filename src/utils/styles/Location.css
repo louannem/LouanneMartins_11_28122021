@@ -21,7 +21,7 @@
 .location-title h2 { color: #FF6060; font-size: 18px; font-weight: 500; margin-top: 0}
 
 .tags-list { display: flex;}
-.tags-list div { margin-right: 10px; width: 115px; background-color: #FF6060; color: #ffffff; padding: 5px; font-size: 12px; border-radius: 10px; text-align: center;}
+.tags-list div { margin-right: 10px; min-width: 115px; background-color: #FF6060; color: #ffffff; padding: 5px; font-size: 12px; border-radius: 10px; text-align: center;}
 
 
 /** HOST PROFILE STYLE  **/
