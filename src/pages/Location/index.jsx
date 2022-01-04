@@ -4,6 +4,8 @@ import Gallery from "../../components/Gallery";
 import "../../utils/styles/Location.css"
 import RedStar from "../../assets/red-star.svg"
 import GreyStar from "../../assets/grey-star.svg"
+import { data } from "../../data/logements";
+import { withRouter } from "react-router";
 
 const locationInfo = 
     {
@@ -37,87 +39,96 @@ const locationInfo =
         ]
     }
 
-
 class Location extends React.Component {
     
     listEquip () {
-        return locationInfo.equipments.map((equipment) => (
+        const queryString = window.location.href.substring(window.location.href.lastIndexOf("/") + 1)
+        return data.map((location) =>  location.id === queryString &&
+        (location.equipments.map((equipment) => (
             <li key={equipment}>{equipment}</li>
-        ))
+        ))))
     }
 
     render() {
+        const queryString = window.location.href.substring(window.location.href.lastIndexOf("/") + 1)
+
         return(
             <div className="kasa-location">
-
-                <Gallery imgSrc={locationInfo.pictures[0]} index={locationInfo.pictures.indexOf(locationInfo.pictures[0]) + 1} arrayLength={locationInfo.pictures.length} counter={locationInfo.pictures.length} picturesArray={locationInfo.pictures} />
-
-                <div className="location-header">
-                    <div className="location-title">
-                        <h1>{locationInfo.title}</h1>
-                        <h2>{locationInfo.location}</h2>
-
-                        <div className="tags-list">
-                        {locationInfo.tags.map((tag) => (
-                                            <div key={tag}>{tag}</div>
-                                        ))}        
-                        </div>                
-                    </div>
-
-                    <div className="location-host">
-                        <div className="host-profil">
-                            <span>{locationInfo.host.name}</span>
-                            <img alt="" src={locationInfo.host.picture} />
-                        </div>
-
-                        {locationInfo.rating === "1" ?
-                        <div className="location-rating">
-                            <img src={RedStar} alt="Location rating"/>
-                            <img src={GreyStar} alt="Location rating"/>
-                            <img src={GreyStar} alt="Location rating"/>
-                            <img src={GreyStar} alt="Location rating"/>
-                            <img src={GreyStar} alt="Location rating"/>
-                        </div>
-                        : locationInfo.rating === "2" ?
-                        <div className="location-rating">
-                            <img src={RedStar} alt="Location rating"/>
-                            <img src={RedStar} alt="Location rating"/>
-                            <img src={GreyStar} alt="Location rating"/>
-                            <img src={GreyStar} alt="Location rating"/>
-                            <img src={GreyStar} alt="Location rating"/>
-                        </div>
-                        : locationInfo.rating === "3" ?
-                        <div className="location-rating">
-                            <img src={RedStar} alt="Location rating"/>
-                            <img src={RedStar} alt="Location rating"/>
-                            <img src={RedStar} alt="Location rating"/>
-                            <img src={GreyStar} alt="Location rating"/>
-                            <img src={GreyStar} alt="Location rating"/>
-                        </div>
-                        : locationInfo.rating === "4" ?
-                        <div className="location-rating">
-                            <img src={RedStar} alt="Location rating"/>
-                            <img src={RedStar} alt="Location rating"/>
-                            <img src={RedStar} alt="Location rating"/>
-                            <img src={RedStar} alt="Location rating"/>
-                            <img src={GreyStar} alt="Location rating"/>
-                        </div>
-                        :
-                        <div className="location-rating">
-                            <img src={RedStar} alt="Location rating"/>
-                            <img src={RedStar} alt="Location rating"/>
-                            <img src={RedStar} alt="Location rating"/>
-                            <img src={RedStar} alt="Location rating"/>
-                            <img src={RedStar} alt="Location rating"/>
-                        </div>
-                        }
-                    </div>
-                </div>
                 
-                <div className="location-collapses">
-                    <Collapse title="Description" content={locationInfo.description}/>
-                    <Collapse title="Description" content={this.listEquip()}/>
-                </div>
+                {data.map((location) => (
+                    queryString === location.id &&
+                    <div className="kasa-location">
+                        <Gallery imgSrc={location.pictures[0]} index={location.pictures.indexOf(location.pictures[0]) + 1} arrayLength={location.pictures.length} counter={location.pictures.length} picturesArray={location.pictures}/>
+                        <div className="location-header">
+                            <div className="location-title">
+                                <h1>{location.title}</h1>
+                                <h2>{location.location}</h2>
+
+                                <div className="tags-list">
+                                {location.tags.map((tag) => (
+                                            <div key={tag}>{tag}</div>
+                                    ))}        
+                                </div>  
+                            </div>
+
+                            <div className="location-host">
+                                <div className="host-profil">
+                                    <span>{location.host.name}</span>
+                                    <img alt="" src={location.host.picture} />
+                                </div>
+
+                                {location.rating === "1" ?
+                                <div className="location-rating">
+                                    <img src={RedStar} alt="Location rating"/>
+                                    <img src={GreyStar} alt="Location rating"/>
+                                    <img src={GreyStar} alt="Location rating"/>
+                                    <img src={GreyStar} alt="Location rating"/>
+                                    <img src={GreyStar} alt="Location rating"/>
+                                </div>
+                                : location.rating === "2" ?
+                                <div className="location-rating">
+                                    <img src={RedStar} alt="Location rating"/>
+                                    <img src={RedStar} alt="Location rating"/>
+                                    <img src={GreyStar} alt="Location rating"/>
+                                    <img src={GreyStar} alt="Location rating"/>
+                                    <img src={GreyStar} alt="Location rating"/>
+                                </div>
+                                : location.rating === "3" ?
+                                <div className="location-rating">
+                                    <img src={RedStar} alt="Location rating"/>
+                                    <img src={RedStar} alt="Location rating"/>
+                                    <img src={RedStar} alt="Location rating"/>
+                                    <img src={GreyStar} alt="Location rating"/>
+                                    <img src={GreyStar} alt="Location rating"/>
+                                </div>
+                                : location.rating === "4" ?
+                                <div className="location-rating">
+                                    <img src={RedStar} alt="Location rating"/>
+                                    <img src={RedStar} alt="Location rating"/>
+                                    <img src={RedStar} alt="Location rating"/>
+                                    <img src={RedStar} alt="Location rating"/>
+                                    <img src={GreyStar} alt="Location rating"/>
+                                </div>
+                                :
+                                <div className="location-rating">
+                                    <img src={RedStar} alt="Location rating"/>
+                                    <img src={RedStar} alt="Location rating"/>
+                                    <img src={RedStar} alt="Location rating"/>
+                                    <img src={RedStar} alt="Location rating"/>
+                                    <img src={RedStar} alt="Location rating"/>
+                                </div>
+                                }
+                            </div>
+                        </div>
+
+                        <div className="location-collapses">
+                            <Collapse title="Description" content={location.description}/>
+                            <Collapse title="Description" content={this.listEquip()}/>
+                        </div>
+                    </div>
+                    
+                     
+                ))}
             </div>
         )
     }

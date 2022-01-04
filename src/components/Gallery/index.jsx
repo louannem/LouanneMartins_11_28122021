@@ -24,7 +24,6 @@ class Gallery extends React.Component {
                 counter : this.state.counter + 1
             })
         }
-        console.log(this.state.counter)
     }
 
     previousImg = () => {
@@ -43,8 +42,8 @@ class Gallery extends React.Component {
         return(
             <div className="kasa-gallery">
                 <div className="gallery-arrows">
-                    <img alt="" src={LeftArrow} onClick={this.previousImg}  />
-                    <img alt="" src={RightArrow} onClick={this.nextImg} />
+                    <img alt="Précédent" src={LeftArrow} onClick={this.previousImg}  />
+                    <img alt="Suivant" src={RightArrow} onClick={this.nextImg} />
                 </div>
                 <span className="gallery-counter">{this.state.counter + 1}/{this.props.counter}</span>
                 <img src={this.props.picturesArray[this.state.counter]} alt="Location gallery" className="gallery-img" />
