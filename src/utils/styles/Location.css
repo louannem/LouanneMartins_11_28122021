@@ -92,8 +92,12 @@
 
 @media screen and (max-width: 480px) {
     .location-header { flex-direction: column; height: auto;}
+    .location-title { width: 100%;}
     .location-header h1 { font-size: 18px;}
     .location-header h2 { font-size: 14px;}
+
+    .tags-list { flex-wrap: wrap;}
+    .tags-list div { min-width: 85px; margin-bottom: 5px;}
     
     .location-host { display: flex; flex-direction: row; justify-content: space-between; height: 32px; margin-top: 15px;}
     .host-profil {  order: 1; justify-content: flex-end;}

@@ -8,7 +8,9 @@ class About extends React.Component {
     render() {
         return(
             <div className="kasa-about">
+                <div className="banner-wrapper banner-about">
                 <Banner title="" img={aboutBanner} className="about-banner"/>
+                </div>
 
                 <div className="about-content">
                     <Collapse title="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."/>

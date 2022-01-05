@@ -19,18 +19,17 @@ class Location extends React.Component {
 
     render() {
         const queryString = window.location.href.substring(window.location.href.lastIndexOf("/") + 1)
-
         return(
-            <div className="kasa-location">
-                {data.map((location) => (
+
+                data.map((location) => (
                     queryString === location.id &&
                     <div className="kasa-location" key={location.id + `-wrapper`} >
                         <Gallery imgSrc={location.pictures[0]} index={location.pictures.indexOf(location.pictures[0]) + 1} arrayLength={location.pictures.length} counter={location.pictures.length} picturesArray={location.pictures}/>
+                        
                         <div className="location-header">
                             <div className="location-title">
                                 <h1>{location.title}</h1>
                                 <h2>{location.location}</h2>
-
                                 <Tag arrayTags={location.tags} />
                             </div>
 
@@ -51,8 +50,8 @@ class Location extends React.Component {
                     </div>
                     
                      
-                ))}
-            </div>
+                ))
+            
         )
     }
 }

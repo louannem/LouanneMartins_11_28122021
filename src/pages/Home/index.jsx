@@ -11,7 +11,9 @@ class Home extends React.Component {
     render() {
         return(
             <div className="kasa-home">
-                <Banner title="Chez vous, partout et ailleurs" img={homeBanner} />
+                <div className="banner-wrapper banner-home">
+                    <Banner title="Chez vous, partout et ailleurs" img={homeBanner} />
+                </div>
 
                 <div className="location-grid">
                     {data.map((location) => (
