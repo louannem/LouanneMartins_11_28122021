@@ -17,7 +17,7 @@ class Home extends React.Component {
 
                 <div className="location-grid">
                     {data.map((location) => (
-                       <Link key={`link-to-`+location.id} to={`/${location.id}`}><Card key={location.id} name={location.title} /></Link>
+                       <Link key={`link-to-`+location.id} to={`/${location.id}`}><Card key={location.id} name={location.title} LocationCover={location.cover} /></Link>
                     ))}
                 </div>
             </div>

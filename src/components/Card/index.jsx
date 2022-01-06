@@ -7,7 +7,7 @@ class Card extends React.Component {
             <div className="location-card">
                 <p>{this.props.name}</p>
                 <div className="card-filter"></div>
-                <img alt=" "></img>
+                <img alt="Location cover" src={this.props.LocationCover}></img>
             </div>
         )
     }

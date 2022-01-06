@@ -31,6 +31,7 @@
     line-height: 25px;
 }
 
+
 @media  screen and (max-width: 480px) {
     .kasa-collapse { margin-bottom: 20px;}
     .collpase-header { height: 30px}
