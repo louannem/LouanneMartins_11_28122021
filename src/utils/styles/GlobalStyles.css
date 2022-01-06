@@ -53,12 +53,12 @@
 }
 
 /**     TABLET STYLING   **/
-@media screen and (min-width: 481px) and (max-width: 920px ) {
+@media screen and (min-width: 481px) and (max-width: 970px ) {
     .kasa-about, .kasa-home, .kasa-location { padding: 0px 45px }
     .kasa-banner h1 { width: 90%; text-align: left;}
-
     .about-content { padding: 0;}
 }
+
 
 /**     MOBILE STYLING      **/
 @media screen and (max-width : 480px){
