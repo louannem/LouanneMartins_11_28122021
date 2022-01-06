@@ -92,7 +92,13 @@
 .location-collapses li { list-style: none;}
 
 
-/**     TABLET STYLING   **/
+/** TABLET STYLING **/
+@media screen and (min-width: 481px) and (max-width: 880px) {
+    .kasa-gallery { height: 300px;}
+    .location-header { min-height: 170px;}
+    .location-title h1 { font-size: 30px;}  
+    .gallery-arrows img { height: 60px}  
+}
 
 
 /**     MOBILE STYLING      **/
