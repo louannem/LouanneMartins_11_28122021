@@ -58,6 +58,8 @@
     .location-grid a { width: 100%; height: 270px;}
     .location-card img { width: 110%;}
 }
+
+
 /**     MOBILE STYLING      **/
 @media screen and (max-width: 480px) {
     .location-card { width: 100%; height: 255px; }  
