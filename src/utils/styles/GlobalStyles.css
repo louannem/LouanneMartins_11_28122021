@@ -59,7 +59,6 @@
     .about-content { padding: 0;}
 }
 
-
 /**     MOBILE STYLING      **/
 @media screen and (max-width : 480px){
     .kasa-about, .kasa-home, .kasa-location {
