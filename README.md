@@ -1,4 +1,3 @@
-- Projet en développement sur la branche dev
 - Projet approuvé sur la branche master
 
 # Getting Started with Create React App
