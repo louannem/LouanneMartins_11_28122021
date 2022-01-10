@@ -1,3 +1,6 @@
+- Projet en développement sur la branche dev
+- Projet approuvé sur la branche master
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
